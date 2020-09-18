@@ -1,0 +1,14 @@
+<div class="pokemon-list">
+    <h1 class="page-title">
+        Pokédex
+        
+        <a [routerLink]="['/my-pokemons']">go to my pokemons!</a>
+    </h1>
+
+    <poke-pokemon 
+        *ngFor="let pokemon of pokemons" 
+        [pokemon]="pokemon"
+        enableToggle="true"
+    >
+    </poke-pokemon>
+</div>

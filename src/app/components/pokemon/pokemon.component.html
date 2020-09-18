@@ -1,0 +1,22 @@
+<button
+    class="pokemon-capture" 
+    [attr.captured]="pokemon.captured" 
+    (click)="toggleCapture(pokemon.name)"
+    *ngIf="enableToggle"
+>
+</button>
+
+<div class="pokemon-image">
+    <img src="{{ pokemon.image }}" alt="{{ pokemon.name }}">
+</div>
+
+<div class="pokemon-info">
+    <h1 class="pokemon-info--name">{{ pokemon.name }}</h1>
+    <span class="pokemon-info--id">{{ pokemon.id | pokemonId }}</span>
+    
+    <ul class="pokemon-info--types">
+        <li *ngFor="let type of pokemon.types" [ngClass]="'pokemon-info--type ' + type">
+            {{ type }}
+        </li>
+    </ul>
+</div>
