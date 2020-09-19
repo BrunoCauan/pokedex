@@ -11,8 +11,8 @@
 
     .pokemon-capture {
         position: absolute;
-        top: 0;
-        right: 0;
+        top: 5px;
+        right: 5px;
         background: none;
         background-image: url(../../../assets/pokeball.png);
         filter: grayscale(100%);
@@ -22,12 +22,17 @@
         outline: none !important;
         cursor: pointer;
         transition: .4s ease;
-    }
 
-    .pokemon-capture[captured="true"],
-    .pokemon-capture:hover {
-        filter: grayscale(0%);
+        &[captured="true"],
+        &:hover {
+            filter: grayscale(0%);
+        }
+        
+        &:hover {
+            transform: scale(1.15) rotate(-360deg);
+        }
     }
+    
 
     .pokemon-info {
         width: 100%;
